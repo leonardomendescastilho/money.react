@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 0 0 0 2px ${(props) => props.theme['gray-500']};
   }
 
+  img{
+    display: block;
+  }
+
   body {
     background: ${(props) => props.theme['gray-800']};
     color: ${(props) => props.theme['gray-100']};
