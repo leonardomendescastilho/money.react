@@ -1,3 +1,44 @@
 {
-  "transactions": []
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Salário",
+      "type": "income",
+      "category": "Desenvolvimento",
+      "amount": 6000,
+      "createdAt": "2024-12-25T19:30:45.754Z'"
+    },
+    {
+      "id": 2,
+      "description": "Aluguel",
+      "type": "outcome",
+      "category": "Casa",
+      "amount": 1200,
+      "createdAt": "2024-12-25T19:38:45.754Z'"
+    },
+    {
+      "id": 3,
+      "description": "Compras",
+      "type": "outcome",
+      "category": "Alimentação",
+      "amount": 20,
+      "createdAt": "2024-12-25T19:38:45.754Z'"
+    },
+    {
+      "id": 4,
+      "description": "Internet",
+      "type": "outcome",
+      "category": "Serviços",
+      "amount": 120,
+      "createdAt": "2024-12-25T19:30:45.754Z'"
+    },
+    {
+      "id": 5,
+      "description": "Salário",
+      "type": "income",
+      "category": "Desenvolvimento",
+      "amount": 6000,
+      "createdAt": "2024-12-25T19:30:45.754Z'"
+    }
+  ]
 }
