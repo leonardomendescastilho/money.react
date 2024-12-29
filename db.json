@@ -2,7 +2,7 @@
   "transactions": [
     {
       "id": 1,
-      "description": "Salário",
+      "description": "Salario",
       "type": "income",
       "category": "Desenvolvimento",
       "amount": 6000,
@@ -20,7 +20,7 @@
       "id": 3,
       "description": "Compras",
       "type": "outcome",
-      "category": "Alimentação",
+      "category": "Alimentacao",
       "amount": 20,
       "createdAt": "2024-12-29T11:22:39.939Z"
     },
@@ -28,13 +28,13 @@
       "id": 4,
       "description": "Internet",
       "type": "outcome",
-      "category": "Serviços",
+      "category": "Servicos",
       "amount": 120,
       "createdAt": "2024-12-25T19:30:45.754Z"
     },
     {
       "id": 5,
-      "description": "Salário",
+      "description": "Salario",
       "type": "income",
       "category": "Desenvolvimento",
       "amount": 6000,
