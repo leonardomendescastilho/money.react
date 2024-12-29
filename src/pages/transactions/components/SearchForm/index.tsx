@@ -12,13 +12,15 @@ const searchFormSchema = z.object({
 type SearchFormInputs = z.infer<typeof searchFormSchema>;
 
 function SearchForm() {
-	const { register, handleSubmit, formState } = useForm<SearchFormInputs>({
-		resolver: zodResolver(searchFormSchema),
-	});
+	const { register, handleSubmit, formState, reset } =
+		useForm<SearchFormInputs>({
+			resolver: zodResolver(searchFormSchema),
+		});
 	const { loadTransactions } = useTransactions();
 
 	const handleSearchTransaction = async (data: SearchFormInputs) => {
 		await loadTransactions(data.query);
+		reset();
 	};
 
 	const { isSubmitting } = formState;
