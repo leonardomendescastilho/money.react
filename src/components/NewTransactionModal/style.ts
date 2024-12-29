@@ -38,6 +38,11 @@ export const Content = styled(Dialog.Content)`
       &::placeholder {
         color: ${(props) => props.theme['gray-500']};
       }
+
+      span{
+        font-size: 0.875rem;
+        color: ${(props) => props.theme['gray-500']};
+      }
     }
 
     button[type="submit"] {
@@ -124,3 +129,11 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
   }
 
 ` 
+
+
+export const TransactionText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme['gray-300']};
+`
