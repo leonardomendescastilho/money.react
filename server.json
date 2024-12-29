@@ -6,7 +6,7 @@
       "type": "income",
       "category": "Desenvolvimento",
       "amount": 6000,
-      "createdAt": "2024-12-25T19:30:45.754Z'"
+      "createdAt": "2024-12-25T19:30:45.754Z"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "type": "outcome",
       "category": "Casa",
       "amount": 1200,
-      "createdAt": "2024-12-25T19:38:45.754Z'"
+      "createdAt": "2024-12-29T11:23:39.939Z"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "type": "outcome",
       "category": "Alimentação",
       "amount": 20,
-      "createdAt": "2024-12-25T19:38:45.754Z'"
+      "createdAt": "2024-12-29T11:22:39.939Z"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "type": "outcome",
       "category": "Serviços",
       "amount": 120,
-      "createdAt": "2024-12-25T19:30:45.754Z'"
+      "createdAt": "2024-12-25T19:30:45.754Z"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "type": "income",
       "category": "Desenvolvimento",
       "amount": 6000,
-      "createdAt": "2024-12-25T19:30:45.754Z'"
+      "createdAt": "2024-12-25T19:30:45.754Z"
     }
   ]
 }
