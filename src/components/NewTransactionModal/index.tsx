@@ -4,17 +4,20 @@ import {
 	CloseButton,
 	Content,
 	Overlay,
+	TransactionText,
 	TransactionType,
 	TransactionTypeButton,
 } from './style';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import * as z from 'zod';
+import { useTransactions } from '../../hooks/useTransactions';
 
 const newTransactionFormSchema = z.object({
 	description: z.string(),
-	price: z.number(),
+	amount: z.number(),
 	category: z.string(),
 	type: z.enum(['income', 'outcome']),
 });
@@ -22,7 +25,9 @@ const newTransactionFormSchema = z.object({
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>;
 
 function NewTransactionModal() {
-	const { register, handleSubmit, formState, control } =
+	const [isCreated, setIsCreated] = useState<boolean>(false);
+
+	const { register, handleSubmit, formState, control, reset } =
 		useForm<NewTransactionFormInputs>({
 			resolver: zodResolver(newTransactionFormSchema),
 			defaultValues: {
@@ -30,12 +35,21 @@ function NewTransactionModal() {
 			},
 		});
 
-	const { isSubmitting } = formState;
+	const { createTransaction } = useTransactions();
 
 	const handleCreateNewTransaciton = async (data: NewTransactionFormInputs) => {
-		await new Promise((resolve) => setTimeout(resolve, 2000));
-		console.log(data);
+		createTransaction(data);
+
+		reset();
+
+		setIsCreated(true);
+
+		setTimeout(() => {
+			setIsCreated(false);
+		}, 3000);
 	};
+
+	const { isSubmitting } = formState;
 
 	return (
 		<>
@@ -57,7 +71,7 @@ function NewTransactionModal() {
 						<input
 							type="number"
 							placeholder="Preço"
-							{...register('price', { valueAsNumber: true })}
+							{...register('amount', { valueAsNumber: true })}
 						/>
 						<input
 							type="text"
@@ -92,6 +106,10 @@ function NewTransactionModal() {
 								);
 							}}
 						/>
+
+						<TransactionText>
+							{isCreated && <span>Cadastro realizado com sucesso</span>}
+						</TransactionText>
 
 						<button
 							type="submit"
