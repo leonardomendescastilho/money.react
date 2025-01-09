@@ -39,6 +39,14 @@
       "description": "Açai",
       "type": "outcome",
       "createdAt": "2024-12-29T21:52:12.438Z"
+    },
+    {
+      "id": "b6ef",
+      "amount": 6000,
+      "category": "Desenvolvimento",
+      "description": "Salário",
+      "type": "income",
+      "createdAt": "2025-01-09T10:54:52.980Z"
     }
   ]
 }
